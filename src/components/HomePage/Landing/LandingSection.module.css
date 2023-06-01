@@ -1,0 +1,19 @@
+.sectionHeader {
+  background-image: url("../../../assets/img/backgrounds/landing.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 70vh;
+  background-color: #324f75;
+  color: #fff;
+}
+.overlay {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  background-color: rgb(0, 0, 0, 0.35);
+}
