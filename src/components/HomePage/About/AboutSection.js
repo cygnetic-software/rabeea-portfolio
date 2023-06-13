@@ -89,12 +89,17 @@ const AboutSection = ({ id }) => {
             <div className="d-flex align-items-center justify-content-center my-2">
               <Fade direction="up" cascade triggerOnce>
                 <div className="me-2">
-                  <img
-                    width="24"
-                    height="24"
-                    src="https://img.icons8.com/material-outlined/24/linkedin--v1.png"
-                    alt="linkedin--v1"
-                  />
+                  <a
+                    href="
+                  https://www.linkedin.com/in/rabeea-aftab-53880a1b5/"
+                  >
+                    <img
+                      width="24"
+                      height="24"
+                      src="https://img.icons8.com/material-outlined/24/linkedin--v1.png"
+                      alt="linkedin--v1"
+                    />
+                  </a>
                 </div>
                 <div className="me-2">
                   <img
