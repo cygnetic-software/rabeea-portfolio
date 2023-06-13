@@ -1,0 +1,7 @@
+:root {
+  --primary: #f5c17e;
+}
+.active {
+  color: var(--primary) !important;
+  font-weight: bold;
+}

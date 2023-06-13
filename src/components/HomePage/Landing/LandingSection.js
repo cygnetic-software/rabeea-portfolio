@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./LandingSection.module.css";
-const LandingSection = () => {
+import { Fade } from "react-awesome-reveal";
+import { useData } from "../../../context/DataProvider";
+import { useInView } from "react-intersection-observer";
+const LandingSection = ({ id }) => {
+  const { setCurrent } = useData();
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setCurrent(id);
+    }
+  }, [inView]);
+
   return (
-    <section id="LandingSection">
+    <section id="landingSection" ref={ref}>
       <div
         className={
           classes.sectionHeader +
@@ -10,12 +25,14 @@ const LandingSection = () => {
         }
       >
         <div className={classes.overlay}></div>
-        <div className="text-center" style={{ zIndex: "2" }}>
-          <h1 className="display-3">
-            <strong>HI, I'M RABEEA</strong>
-          </h1>
-          <p>WRITER | CREATOR | MANAGER</p>
-        </div>
+        <Fade direction="up" triggerOnce>
+          <div className="text-center" style={{ zIndex: "2" }}>
+            <h1 className="display-3">
+              <strong>HI, I'M RABEEA</strong>
+            </h1>
+            <p>WRITER | CREATOR | MANAGER</p>
+          </div>
+        </Fade>
       </div>
     </section>
   );
